@@ -1,16 +1,24 @@
 {
     "manifestVersion": "v3",
-    "name": "SampleApp",
+    "name": "passengerwelcomedigitalgen",
     "interfaces": [
         {
             "type": "vehicle-signal-interface",
             "config": {
-                "src": "https://github.com/COVESA/vehicle_signal_specification/releases/download/v4.0/vss_rel_4.0.json",
+                "src": "./app/vspec.json",
                 "datapoints": {
                     "required": [
                         {
-                            "path": "Vehicle.Speed",
-                            "access": "read"
+                            "path": "Vehicle.Cabin.Door.Row1.DriverSide.IsOpen",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.Light.IsDomeOn",
+                            "access": "write"
+                        },
+                        {
+                            "path": "Vehicle.Cabin.Seat.Row1.DriverSide.Height",
+                            "access": "write"
                         }
                     ]
                 }
